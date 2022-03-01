@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+#FRONT-END
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Desafio Técnico - Empresa ETEG
 
-## Available Scripts
+### Descrição do projeto :seedling:
 
-In the project directory, you can run:
+Desenvolver uma aplicação web para fazer uma gestão básica de estoque de uma locadora de filmes.
 
-### `yarn start`
+### Entidades(+atributos básicos) :pushpin:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Filme (nome, gênero, diretor, quantidade).
+- Usuário (nome, sexo, CPF).
+- Locação (filme, usuario, data de devolução, etc).
+- Histórico de locação: Registros das locações de filmes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Funcionalidades :sparkles:
+- CRUD usuário:
+- Regra 1: validar consistência dos dados, como CPF e data de nascimento.
+- Regra 2: validar obrigatoriedade dos dados, como nome e CPF.
+- Regra 3: só serão aceitos cadastros de usuários com mais de 18 anos.
+- CRUD filme:
+- Regra 1: um usuário pode alugar no máximo 5 filmes por vez.
+- Regra 2: o filme deve estar disponível em estoque.
+- Renovar locação: dado uma locação, renová-la para um número X de dias.
+- Regra 1: Limitar o número de renovações em no máximo duas ocorrências.
+- Consultar histórico de locação.
 
-### `yarn test`
+### Observações :rotating_light:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Não utilizar Spring-Data-REST, queremos ver a forma como o candidato estrutura o RestController.
+- Apenas reforçando: os requisitos e regras citadas acima são apenas uma proposta. Elas podem ser alteradas e novas regras podem ser adicionadas.
+- É um diferencial o desenvolvimento de testes automatizados.
+- Utilizar banco de dados relacional e JPA.
 
-### `yarn build`
+### Pré-requisitos :thumbsup:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- JDK 8 e Maven
+- Node e Yarn
+- Pgadmin
+- Eclipse
+- VSCode
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Foi utilizado :point_down:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Spring Boot
+- React
+- PostgreSQL
+- JPA
+- Lombok
+- JUnit 5
+- Tokens JWT
+- Bootstrap
+- Bootswatch
+- Axios
+- Primereact
+- Heroku
 
-### `yarn eject`
+### Scripts do banco :point_down:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+CREATE DATABASE desafioeteg
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+CREATE SCHEMA desafio
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+CREATE TABLE desafio.usuario
+(
+  id bigserial NOT NULL PRIMARY KEY,
+  nome character varying(150),
+  email character varying(100),
+  senha character varying(255),
+  data_cadastro date default now()
+);
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+CREATE TABLE desafio.locacao
+(
+  id bigserial NOT NULL PRIMARY KEY ,
+  filme character varying(100) NOT NULL,
+  mes integer NOT NULL,
+  ano integer NOT NULL,
+  valor numeric(16,2),
+  tipo character varying(20),
+  status character varying(20),
+  id_usuario bigint REFERENCES desafio.usuario (id),
+  data_cadastro date default now()
+);
 
-## Learn More
+### Instalação da aplicação :point_down:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Eclipse: Importar backedn como projeto Maven.
+- VSCode: Abrir pasta do frontend
+    
+### Iniciar aplicação :point_down:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Rodar a classe DesafioetegApplication (backend)
+- Rodar `yarn start` na raiz do projeto (frontend)
 
-### Code Splitting
+### URL publicada da aplicação :technologist:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://desafioeteg.herokuapp.com
