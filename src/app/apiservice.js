@@ -3,7 +3,7 @@ import axios from 'axios'
 const baseURL = process.env.REACT_APP_API_URL
 
 export const httpClient = axios.create({
-    baseURL: 'https://desafioeteg-api.herokuapp.com/',
+    baseURL: baseURL,
     withCredentials: true
 })
 
