@@ -45,6 +45,7 @@
 - PostgreSQL
 - Pgadmin
 - JPA
+- Postman
 - Lombok
 - JUnit 5
 - Tokens JWT
@@ -86,12 +87,12 @@
 ### Instalação da aplicação :point_down:
 
 - Eclipse: Importar back-end como projeto Maven
-- VSCode: Abrir pasta do front-end
+- VSCode: Abrir pasta do front-end e rodar `yarn install`
     
 ### Iniciar aplicação :point_down:
 
 - Rodar a classe DesafioetegApplication (back-end)
-- Rodar `yarn install` e depois `yarn start` na raiz do projeto (front-end)
+- Rodar `yarn start` na raiz do projeto (front-end)
 
 ### URL publicada da aplicação :technologist:
 
