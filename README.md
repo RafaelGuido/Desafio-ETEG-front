@@ -4,7 +4,7 @@
 
 ### Descrição do projeto :seedling:
 
-Desenvolver uma aplicação web para fazer uma gestão básica de estoque de uma locadora de filmes.
+- Desenvolver uma aplicação web para fazer uma gestão básica de estoque de uma locadora de filmes.
 
 ### Entidades(+atributos básicos) :pushpin:
 
@@ -57,11 +57,11 @@ Desenvolver uma aplicação web para fazer uma gestão básica de estoque de uma
 
 ### Scripts do banco :point_down:
 
-CREATE DATABASE desafioeteg
+- CREATE DATABASE desafioeteg
 
-CREATE SCHEMA desafio
+- CREATE SCHEMA desafio
 
-CREATE TABLE desafio.usuario
+- CREATE TABLE desafio.usuario
 (
   id bigserial NOT NULL PRIMARY KEY,
   nome character varying(150),
@@ -70,7 +70,7 @@ CREATE TABLE desafio.usuario
   data_cadastro date default now()
 );
 
-CREATE TABLE desafio.locacao
+- CREATE TABLE desafio.locacao
 (
   id bigserial NOT NULL PRIMARY KEY ,
   filme character varying(100) NOT NULL,
@@ -95,4 +95,4 @@ CREATE TABLE desafio.locacao
 
 ### URL publicada da aplicação :technologist:
 
-https://desafioeteg.herokuapp.com
+- https://desafioeteg.herokuapp.com
