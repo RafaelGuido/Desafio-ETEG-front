@@ -11,7 +11,7 @@ class LandingPage extends React.Component {
         return (
             <div className="container text-center" >
                 <h2>Seja bem-vindo ao sistema Locadora</h2>
-                Este é seu sistema para gestão básica de estoque,
+                Esse é seu sistema para gestão básica,
                 clique no botão abaixo para acessar o sistema: < br/>< br/>
 
                 <div className="offset-md-4 col-md-4">
