@@ -2,6 +2,7 @@ import React from 'react';
 
 import Rotas from './rotas'
 import Navbar from '../components/navbar'
+import Footer from '../components/footer';
 import ProvedorAutenticacao from './provedorAutenticacao'
 
 import 'toastr/build/toastr.min'
@@ -23,6 +24,7 @@ class App extends React.Component {
         <div className="container">    
             <Rotas />
         </div>
+        <Footer />
       </ProvedorAutenticacao>
     )
   }
