@@ -57,9 +57,9 @@
 
 ### Scripts do banco :point_down:
 
-- CREATE DATABASE desafioeteg
+- CREATE DATABASE desafioeteg;
 
-- CREATE SCHEMA desafio
+- CREATE SCHEMA desafio;
 
 - CREATE TABLE desafio.usuario
 (
