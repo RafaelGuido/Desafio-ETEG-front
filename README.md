@@ -1,4 +1,4 @@
-#FRONT-END
+# FRONT-END
 
 # Desafio Técnico - Empresa ETEG
 
@@ -34,23 +34,23 @@ Desenvolver uma aplicação web para fazer uma gestão básica de estoque de uma
 
 ### Pré-requisitos :thumbsup:
 
-- JDK 8 e Maven
-- Node e Yarn
-- Pgadmin
-- Eclipse
-- VSCode
+- JDK 8 e Maven (back-end)
+- Node e Yarn (front-end)
+- Eclipse e VSCode (IDE)
 
 ### Foi utilizado :point_down:
 
 - Spring Boot
 - React
 - PostgreSQL
+- Pgadmin
 - JPA
 - Lombok
 - JUnit 5
 - Tokens JWT
 - Bootstrap
 - Bootswatch
+- Toastr
 - Axios
 - Primereact
 - Heroku
@@ -85,13 +85,13 @@ CREATE TABLE desafio.locacao
 
 ### Instalação da aplicação :point_down:
 
-- Eclipse: Importar backedn como projeto Maven.
-- VSCode: Abrir pasta do frontend
+- Eclipse: Importar back-end como projeto Maven
+- VSCode: Abrir pasta do front-end
     
 ### Iniciar aplicação :point_down:
 
-- Rodar a classe DesafioetegApplication (backend)
-- Rodar `yarn start` na raiz do projeto (frontend)
+- Rodar a classe DesafioetegApplication (back-end)
+- Rodar `yarn start` na raiz do projeto (front-end)
 
 ### URL publicada da aplicação :technologist:
 
