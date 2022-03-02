@@ -91,7 +91,7 @@
 ### Iniciar aplicação :point_down:
 
 - Rodar a classe DesafioetegApplication (back-end)
-- Rodar `yarn start` na raiz do projeto (front-end)
+- Rodar `yarn install` e depois `yarn start` na raiz do projeto (front-end)
 
 ### URL publicada da aplicação :technologist:
 
